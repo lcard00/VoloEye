@@ -3,12 +3,11 @@ local root_template = "Server/project/src/"
 
 local utils = Ext.Require(root_template .. "modules/utils.lua")
 
--- check if the mod is loaded
 local check_mod_status, mod_uuid = utils.check_mod_status("ebc37348-b345-4d49-a28f-c0491824d755", debug)
+local visual_type = 0
 
 if check_mod_status then
     Ext.Osiris.RegisterListener("TemplateEquipped", 2, "after", function(item, character)
-        -- put code here to equipped template
         local character_name, character_uuid = utils.get_character_data(character)
 
         if debug then
@@ -28,11 +27,10 @@ if check_mod_status then
 
         local item_found, change_eye_color = utils.read_item(item_template, 1, false)
 
-
         if change_eye_color and item_found and mod_uuid == "ebc37348-b345-4d49-a28f-c0491824d755" then
-            local visual_type = 2
+            visual_type = 1 -- Volothamp visual
+            
             local question = utils.read_questions(2)
-
             Osi.OpenMessageBoxYesNo(character, question)
 
             Ext.Osiris.RegisterListener("MessageBoxYesNoClosed", 3, "after", function(char, msgbox, option)
@@ -48,7 +46,6 @@ if check_mod_status then
         end
     end)
     Ext.Osiris.RegisterListener("TemplateUnequipped", 2, "after", function(item, character)
-        -- put code here to unnequipped template
         local character_name, character_uuid = utils.get_character_data(character)
 
         if debug then
@@ -74,7 +71,7 @@ if check_mod_status then
         end
 
         if change_eye_color and item_found and mod_uuid == "ebc37348-b345-4d49-a28f-c0491824d755" then
-            utils.remove_material_ovveride(character, 2, false)
+            utils.remove_material_ovveride(character, visual_type, false)
         end
     end)
 end
