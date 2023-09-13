@@ -27,7 +27,7 @@ if check_mod_status then
         end
 
         local item_found, change_eye_color = utils.read_item(item_template, 1, false)
-        
+
 
         if change_eye_color and item_found and mod_uuid == "ebc37348-b345-4d49-a28f-c0491824d755" then
             local visual_type = 2
@@ -35,22 +35,22 @@ if check_mod_status then
 
             Osi.OpenMessageBoxYesNo(character, question)
 
-            Ext.Osiris.RegisterListener("MessageBoxYesNoClosed", 3, "after", function (char, msgbox, option)
+            Ext.Osiris.RegisterListener("MessageBoxYesNoClosed", 3, "after", function(char, msgbox, option)
                 if option == 1 then
                     utils.apply_material_ovveride(char, visual_type)
                 end
             end)
-            
+
             if debug then
                 utils.print_msg("item_found......: " .. item_found, 2, 2)
                 utils.print_msg("change_eye_color: " .. change_eye_color, 2, 2)
-            end 
+            end
         end
     end)
     Ext.Osiris.RegisterListener("TemplateUnequipped", 2, "after", function(item, character)
         -- put code here to unnequipped template
         local character_name, character_uuid = utils.get_character_data(character)
-        
+
         if debug then
             utils.print_msg("", 2, 1)
             utils.print_msg("character........: " .. character, 2, 2)
@@ -71,7 +71,7 @@ if check_mod_status then
         if debug then
             utils.print_msg("item_found......: " .. item_found, 2, 2)
             utils.print_msg("change_eye_color: " .. change_eye_color, 2, 2)
-        end 
+        end
 
         if change_eye_color and item_found and mod_uuid == "ebc37348-b345-4d49-a28f-c0491824d755" then
             utils.remove_material_ovveride(character, 2, false)
