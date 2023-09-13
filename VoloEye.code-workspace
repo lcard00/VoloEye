@@ -1,0 +1,72 @@
+{
+  "folders": [
+    {
+      "path": "C:/Program Files (x86)/Steam/steamapps/common/Baldurs Gate 3/Data/Mods/VoloEye",
+      "name": "Mods"
+    },
+    {
+      "path": "C:/Program Files (x86)/Steam/steamapps/common/Baldurs Gate 3/Data/Public/VoloEye",
+      "name": "Public"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baldurs Gate 3\\BG3ModManager\\Modding\\ExtenderScripts\\",
+      "name": "ReferenceScripts"
+    }
+  ],
+  "settings": {
+   "emmylua.source.roots": [
+     "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baldurs Gate 3\\Data\\Mods\\VoloEye\\Scriptextender\\",
+     
+   ],
+    "search.exclude": {
+			"**/*.raw": true,
+			"**/Story/*.div": true,
+			"**/*.osi": true,
+			"**/*.dat": true
+		},
+		"Lua.workspace.library": [
+			"C:\\Modding\\BG3\\ReferenceScripts"
+		],
+		"Lua.diagnostics.libraryFiles": "Disable",
+		"Lua.diagnostics.workspaceRate": 25,
+		"Lua.diagnostics.workspaceDelay": 5000,
+		"Lua.workspace.preloadFileSize": 10000,
+    "[lua]": {
+      "diffEditor.codeLens": true,
+      "editor.codeLensFontFamily": "FiraCodeNerdFont-Retina",
+      "editor.fontFamily": "FiraCodeNerdFont-Retina, Consolas, 'Courier New', monospace"
+    },
+  //  "Lua.misc.executablePath": "C:\\Program Files (x86)\\Lua\\lua54\\lua54.exe",
+    "Lua.codeLens.enable": true,
+    "Lua.completion.callSnippet": "Replace",
+    "Lua.diagnostics.globals": [
+      "Ext",
+      "Osi",
+      "_P",
+      "_D"
+    ],
+    "Lua.runtime.path": [
+      "?.lua",
+      "?/init.lua",
+      "./?/?.lua"
+    ],
+    "emmylua.debugger.defaultProgram": "lua54",
+    "code-runner.executorMap": {
+
+
+      "lua": "lua54"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "code-runner.defaultLanguage": "lua",
+  "code-runner.executorMapByFileExtension": {
+    ".lua": "lua54"
+  },
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.ignoreSelection": false,
+  "code-runner.runInTerminal": false,
+  "emmylua.lint.spellCheck": false
+  
+  }
+}
