@@ -17,13 +17,12 @@
       "name": "ReferencesLocalization"
     },
     {
-      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baldurs Gate 3\\BG3ModManager\\Modding\\ExtenderScripts\\",
+      "path": "C:/Program Files (x86)/Steam/steamapps/common/Baldurs Gate 3/BG3ModManager/Modding/ExtenderScripts",
       "name": "ReferenceScripts"
     }
   ],
   "settings": {
-   "emmylua.source.roots": ["C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baldurs Gate 3\\Data\\Mods\\VoloEye\\Scriptextender\\",
-   ],
+  "emmylua.source.roots": ["C:/Program Files (x86)/Steam/steamapps/common/Baldurs Gate 3/Data/Mods/VoloEye/Scriptextender",],
     "search.exclude": {
 			"**/*.raw": true,
 			"**/Story/*.div": true,
