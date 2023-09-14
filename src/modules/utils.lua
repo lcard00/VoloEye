@@ -1,6 +1,5 @@
 ---@meta
 
-
 -- Enum Types
 ---@alias item_status enum
 ---| `0` # unnequipped
@@ -20,10 +19,10 @@
 ---| `2` # material_override
 ---| `3` # questions
 ---@alias override_preset enum
----| `0` # CAMP_Volo_ErsatzEye
----| `1` # HalfIllithid
----| `2` # S_HAG_LeftEyeBlind
----| `3` # S_HAG_RightEyeBlind
+---| `1` # CAMP_Volo_ErsatzEye
+---| `2` # HalfIllithid
+---| `3` # S_HAG_LeftEyeBlind
+---| `4` # S_HAG_RightEyeBlind
 
 local debug = false
 local utils = {}
@@ -84,7 +83,7 @@ function utils.check_mod_status(mod_uuid, debug)
         return true, mod_uuid
     else
         if debug then
-            utils.print_msg("Mod " .. mod_uuid .. " not loaded. Please check BG3 Modmanager and try again\n", 1, 1)
+            utils.print_msg("Mod " .. mod_uuid .. " not loaded. Please check BG3 Modmanager and try again", 1, 1)
         end
 
         return false, mod_uuid
@@ -183,9 +182,9 @@ function utils.read_item(item_data, status, debug)
                     item_found = 1
                     change_eye_color = 1
 
-                    if item_found and debug then
+                    if item_found == 1 and debug then
                         utils.print_item(item)
-                    elseif not item_found and debug then
+                    elseif item_found == 0 and debug then
                         utils.print_msg("Item " .. item.item_name .. item.map_key .. " not found in database DBTemplate, table custom_root_template", 0, 1)
                     end
                     
@@ -194,9 +193,9 @@ function utils.read_item(item_data, status, debug)
                     item_found = true
                     change_eye_color = true
                     
-                    if item_found and debug then
+                    if item_found and debug == 0 then
                         utils.print_item(item)
-                    elseif not item_found and debug then
+                    elseif item_found and debug then
                         utils.print_msg("Item " .. item.item_name .. item.map_key .. " not found in database DBTemplate, table custom_root_template", 0, 1)
                     end
                 end
@@ -220,8 +219,6 @@ local function get_material_override(type)
         uuid = "a2a75f90-4bdf-4009-97f4-e34363c82acc" -- Left Hag
     elseif type == 4 then
         uuid = "5c386818-daf8-4d54-9a40-1aa29702d968" -- Right Hag
-    else
-        utils.print_msg("Invalid material preset", 1, 2)
     end
     
     if debug then

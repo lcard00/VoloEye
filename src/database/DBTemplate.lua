@@ -70870,6 +70870,7 @@ private.custom_root_template[7] = {
     parent_template_id = "",
     stats = "DEN_VoloOperation_ErsatzEye_See_Invisibility"
 }
+
 private.custom_root_template[8] = {
     item_name = "DEN_VoloOperation_ErsatzEye_Beholder",
     name_localization = "DEN_VoloOperation_ErsatzEye_Beholder",
@@ -70880,11 +70881,20 @@ private.custom_root_template[8] = {
     stats = "DEN_VoloOperation_ErsatzEye_Beholder"
 }
 
+private.custom_root_template[8] = {
+    item_name = "DEN_VoloOperation_ErsatzEye_See_Invisibility_Charisma",
+    name_localization = "DEN_VoloOperation_ErsatzEye_See_Invisibility_Charisma",
+    item_handle = "h669cb5eag9ff2g4b9cgb2a6gb839226c6c1f",
+    description = "",
+    map_key = "60a0e2c1-dcf9-49f1-bbe5-ebd0088548bf",
+    parent_template_id = "93380b9c-cf4f-413d-99a7-7e2897cdb94e",
+    stats = "DEN_VoloOperation_ErsatzEye_See_Invisibility_Charisma"
+}
 
 private.material_override[1] = {
     preset_name = "CAMP_Volo_ErsatzEye",
     uuid = "dc46662a-d909-4df5-ad12-50a524150aff"
-}
+} 
 
 private.material_override[2] = {
     preset_name = "HalfIllithid",
