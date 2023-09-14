@@ -179,8 +179,8 @@ function utils.read_item(item_data, status, debug)
             local items = read_db(1)
             for key, item in pairs(items) do
                 if item.map_key == item_data then
-                    item_found = 1
-                    change_eye_color = 1
+                    item_found = true
+                    change_eye_color = true
 
                     if item_found == 1 and debug then
                         utils.print_item(item)
