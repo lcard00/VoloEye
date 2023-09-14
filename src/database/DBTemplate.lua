@@ -70923,12 +70923,7 @@ private.questions[2] = {
 
 private.questions[3] = {
     id = 3,
-    question = "Do you want to apply Left Hag's appearance?"
-}
-
-private.questions[4] = {
-    id = 4,
-    question = "Do you want to apply Right Hag's appearance?"
+    question = "Do you want to apply Hag's appearance?"
 }
 
 -- #endregion
