@@ -73,7 +73,7 @@ Ext.Events.GameStateChanged:Subscribe(function(e)
                 utils.print_msg("item_found......: " .. tostring(item_found), 2, 2)
                 utils.print_msg("change_eye_color: " .. tostring(change_eye_color), 2, 2)
             end
-            if change_eye_color and item_found and mod_uuid == "ebc37348-b345-4d49-a28f-c0491824d755" then
+            if change_eye_color and item_found and mod_uuid == mod then
                 utils.remove_material_ovveride(character, visual_type, debug)
             end
         end)
