@@ -270,7 +270,6 @@ function utils.read_questions(id)
 
     for _, question in pairs(questions) do
         if _ == id then
-            utils.print_msg(_ .. question.question, 0, 1)
             return _, question.question
         end
     end
