@@ -2,8 +2,8 @@ local debug = false
 local root_template = "Server/project/src/"
 
 local utils = Ext.Require(root_template .. "modules/utils.lua")
-
-local check_mod_status, mod_uuid = utils.check_mod_status("ebc37348-b345-4d49-a28f-c0491824d755", debug)
+local mod = "ebc37348-b345-4d49-a28f-c0491824d755"
+local check_mod_status, mod_uuid = utils.check_mod_status(mod, debug)
 local visual_type, is_safe 
 
 Ext.Events.GameStateChanged:Subscribe(function(e)
@@ -34,7 +34,7 @@ Ext.Events.GameStateChanged:Subscribe(function(e)
             end
 
             local item_found, change_eye_color = utils.read_item(item_template, 1, false)
-            if change_eye_color and item_found and mod_uuid == "ebc37348-b345-4d49-a28f-c0491824d755" then
+            if change_eye_color and item_found and mod_uuid == mod then
                 visual_type = 1 -- Volothamp visual
                 
                 local question = utils.read_questions(1)
