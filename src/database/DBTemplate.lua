@@ -70881,14 +70881,14 @@ private.custom_root_template[8] = {
     stats = "DEN_VoloOperation_ErsatzEye_Beholder"
 }
 
-private.custom_root_template[8] = {
-    item_name = "DEN_VoloOperation_ErsatzEye_See_Invisibility_Charisma",
-    name_localization = "DEN_VoloOperation_ErsatzEye_See_Invisibility_Charisma",
-    item_handle = "h669cb5eag9ff2g4b9cgb2a6gb839226c6c1f",
+private.custom_root_template[9] = {
+    item_name = "DEN_VoloOperation_ErsatzEye_Inv_Char",
+    name_localization = "DEN_VoloOperation_ErsatzEye_Inv_Char",
+    item_handle = "h18c84d1agec6eg4cc1g8bcfg564bf0569e05",
     description = "",
-    map_key = "60a0e2c1-dcf9-49f1-bbe5-ebd0088548bf",
+    map_key = "036760ae-f2e5-41f3-a3e1-2587b076dd42",
     parent_template_id = "93380b9c-cf4f-413d-99a7-7e2897cdb94e",
-    stats = "DEN_VoloOperation_ErsatzEye_See_Invisibility_Charisma"
+    stats = "DEN_VoloOperation_ErsatzEye_Inv_Char"
 }
 
 private.material_override[1] = {
